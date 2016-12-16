@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<item>
+		<name>バーコードバトラーII付属カード</name>
+		<xml>bb2.xml</xml>
+	</item>
+	<item>
+		<name>バーコードバトラーII 時空を超えた戦士たち(ボードゲーム) 付属カード</name>
+		<xml>bb2b.xml</xml>
+	</item>
+	<item>
+		<name>限定カード</name>
+		<xml>limit.xml</xml>
+	</item>
+	<item>
+		<name>コンビニウォーズ外伝1～白魔術王ホカロンダーの陰謀～</name>
+		<xml>g1.xml</xml>
+	</item>
+	<item>
+		<name>コンビニウォーズ外伝2～古魔術王グロンサンダーの復讐～</name>
+		<xml>g2.xml</xml>
+	</item>
+	<item>
+		<name>コンビニウォーズ外伝3～最後の死闘!VS黒魔術王パノラマンダー～</name>
+		<xml>g3.xml</xml>
+	</item>
+	<item>
+		<name>コンビニウォーズ正伝1～超パワー生命体！ダークバーコード星人登場！！～</name>
+		<xml>s1.xml</xml>
+	</item>
+	<item>
+		<name>コンビニウォーズ正伝2～超合体伝説～</name>
+		<xml>s2.xml</xml>
+	</item>
+	<item>
+		<name>コンビニウォーズ正伝3～精霊伝説～(バーコードバトラーIIダブルC2用ソフト)</name>
+		<xml>s3.xml</xml>
+	</item>
+	<item>
+		<name>コンビニウォーズ正伝4～精霊伝説～(バーコードバトラーIIダブルC2用ソフト)</name>
+		<xml>s4.xml</xml>
+	</item>
+	<item>
+		<name>小田急ステーションウォーズ</name>
+		<xml>oda.xml</xml>
+	</item>
+	<item>
+		<name>バーコードワールド付属カード</name>
+		<xml>bw.xml</xml>
+	</item>
+	<item>
+		<name>バーコードファイター(コロコロコミック付属カード)</name>
+		<xml>bfc.xml</xml>
+	</item>
+	<item>
+		<name>バーコードファイター～バーコードファイター 来襲！機械竜軍団！！～</name>
+		<xml>bf2.xml</xml>
+	</item>
+	<item>
+		<name>バーコードバトラーII 必勝道具箱</name>
+		<xml>bungu.xml</xml>
+	</item>
+	<item>
+		<name>ゼルダの伝説～神々のトライフォース～</name>
+		<xml>loz.xml</xml>
+	</item>
+	<item>
+		<name>ドラゴンスレイヤー英雄伝説</name>
+		<xml>ds.xml</xml>
+	</item>
+	<item>
+		<name>スーパーマリオワールド</name>
+		<xml>smw.xml</xml>
+	</item>
+	<item>
+		<name>スーパーマリオカート</name>
+		<xml>mct.xml</xml>
+	</item>
+	<item>
+		<name>ドラえもん のび太の恐竜</name>
+		<xml>dr.xml</xml>
+	</item>
+	<item>
+		<name>Jリーグ エキサイトステージ'94</name>
+		<xml>jl.xml</xml>
+	</item>
+</root>

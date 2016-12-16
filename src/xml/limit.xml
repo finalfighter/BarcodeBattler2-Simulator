@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<item>
+		<name>チャーハン帝</name>
+		<front_img>barcode/limit/1f.jpg</front_img>
+		<back_img>barcode/limit/1b.jpg</back_img>
+		<barcode></barcode>
+	</item>
+</root>

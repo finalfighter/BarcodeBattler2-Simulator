@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:cx="*"  backgroundColor="#FFFFFF" fontWeight="bold" 
+	 addedToStage="init_bb2()" horizontalScrollPolicy="off" verticalScrollPolicy="off" layout="absolute"
+	width="1544" height="795"  >
+	<mx:Script source="barcode2.as" />
+	<mx:Script source="barcode_reader.as" />
+	<mx:Script source="barcode_cards.as" />
+	<mx:Script>
+		<![CDATA[
+			[Embed(source="img/bb2back.jpg")]
+			[Bindable]
+			public var bb2back:Class;
+			[Embed(source="img/battle.png")]
+			[Bindable]
+			public var battle_png:Class;
+			[Embed(source="img/card_input.png")]
+			[Bindable]
+			public var card_input_png:Class;
+			[Embed(source="img/critical.png")]
+			[Bindable]
+			public var critical_png:Class;
+			[Embed(source="img/damage.png")]
+			[Bindable]
+			public var damage_png:Class;
+			[Embed(source="img/df.png")]
+			[Bindable]
+			public var df_png:Class;
+			[Embed(source="img/escape.png")]
+			[Bindable]
+			public var escape_png:Class;
+			[Embed(source="img/hp.png")]
+			[Bindable]
+			public var hp_png:Class;
+			[Embed(source="img/infomation.png")]
+			[Bindable]
+			public var infomation_png:Class;
+			[Embed(source="img/item.png")]
+			[Bindable]
+			public var item_png:Class;
+			[Embed(source="img/key.png")]
+			[Bindable]
+			public var key_png:Class;
+			[Embed(source="img/magician.png")]
+			[Bindable]
+			public var magician_png:Class;
+			[Embed(source="img/miss.png")]
+			[Bindable]
+			public var miss_png:Class;
+			[Embed(source="img/mp.png")]
+			[Bindable]
+			public var mp_png:Class;
+			[Embed(source="img/pp.png")]
+			[Bindable]
+			public var pp_png:Class;
+			[Embed(source="img/power.png")]
+			[Bindable]
+			public var power_png:Class;
+			[Embed(source="img/st.png")]
+			[Bindable]
+			public var st_png:Class;
+			[Embed(source="img/warrior.png")]
+			[Bindable]
+			public var warrior_png:Class;
+			
+			
+			[Embed(source="bb2graphics/bb2body.png")]
+			[Bindable]
+			public var bb2body_png:Class;
+			[Embed(source="bb2graphics/l_power.png")]
+			[Bindable]
+			public var l_power_png:Class;
+			[Embed(source="bb2graphics/l_battle.png")]
+			[Bindable]
+			public var l_battle_png:Class;
+			[Embed(source="bb2graphics/light.png")]
+			[Bindable]
+			public var light_png:Class;
+			[Embed(source="bb2graphics/on.png")]
+			[Bindable]
+			public var on_png:Class;
+			[Embed(source="bb2graphics/r_battle.png")]
+			[Bindable]
+			public var r_battle_png:Class;
+			[Embed(source="bb2graphics/r_power.png")]
+			[Bindable]
+			public var r_power_png:Class;
+			[Embed(source="bb2graphics/select.png")]
+			[Bindable]
+			public var select_png:Class;
+			[Embed(source="bb2graphics/set.png")]
+			[Bindable]
+			public var set_png:Class;
+			[Embed(source="bb2graphics/sound_on.png")]
+			[Bindable]
+			public var sound_on_png:Class;			
+			[Embed(source="bb2graphics/sound_off.png")]
+			[Bindable]
+			public var sound_off_png:Class;
+		]]>
+	</mx:Script>
+	
+	<mx:VBox id="bb2display" x="{box.x+372}" y="{box.y+160}" verticalGap="0" width="300" height="200" backgroundColor="#ffffff" backgroundImage="{bb2back}" verticalScrollPolicy="off" horizontalScrollPolicy="off" />
+	<mx:Image x="{bb2display.x+10}" y="{bb2display.y+5}" source="{battle_png}"  id="battle_label" />
+	<mx:Image x="{bb2display.x+10}" y="{bb2display.y+25}" source="{card_input_png}"  id="card_input_label" />
+	<mx:Image x="{bb2display.x+110}" y="{bb2display.y+3}" source="{escape_png}"  id="escape_label" />
+	<mx:Image x="{bb2display.x+233}" y="{bb2display.y+5}" source="{power_png}"  id="power_label" />
+	<mx:Image x="{bb2display.x+102}" y="{bb2display.y+21}" source="{critical_png}"  id="critical_label" />
+	<mx:Image x="{bb2display.x+233}" y="{bb2display.y+25}" source="{miss_png}"  id="miss_label" />
+	<mx:Image x="{bb2display.x+5}"  y="{bb2display.y+43}"  source="{magician_png}" id="magician_1p_label"/>
+	<mx:Image x="{bb2display.x+35}"  y="{bb2display.y+43}" source="{warrior_png}" id="warrior_1p_label"/>
+	<mx:Image x="{bb2display.x+65}"  y="{bb2display.y+40}" source="{key_png}" id="key_label"/>
+	<mx:Image x="{bb2display.x+90}"  y="{bb2display.y+50}" source="{item_png}" id="item_label"/>
+	<mx:Image x="{bb2display.x+210}"  y="{bb2display.y+43}" source="{infomation_png}" id="infomation_label"/>
+	<mx:Image x="{bb2display.x+240}"  y="{bb2display.y+43}" source="{warrior_png}" id="warrior_2p_label"/>
+	<mx:Image x="{bb2display.x+267}"  y="{bb2display.y+43}"  source="{magician_png}" id="magician_2p_label"/>
+	<cx:TextInputSprite  x="{bb2display.x+1}"  y="{bb2display.y+73}" text="00000"  id="hp_1p" height="36"  width="90"  />
+	<cx:TextInputSprite  x="{bb2display.x+1}"  y="{bb2display.y+117}" text="00000"  id="st_1p" height="36"  width="90"  />
+	<cx:TextInputSprite  x="{bb2display.x+1}"  y="{bb2display.y+161}" text="00000"  id="df_1p" height="36"  width="90" />
+	<mx:Image x="{bb2display.x+125}"  y="{bb2display.y+73}" source="{hp_png}" id="hp_label"/>
+	<mx:Image x="{bb2display.x+125}"  y="{bb2display.y+93}"  source="{damage_png}" id="damage_label"/>
+	<mx:Image x="{bb2display.x+125}"  y="{bb2display.y+119}" source="{st_png}" id="st_label"/>
+	<mx:Image x="{bb2display.x+125}"  y="{bb2display.y+137}"  source="{mp_png}" id="mp_label"/>
+	<mx:Image x="{bb2display.x+125}"  y="{bb2display.y+159}" source="{df_png}" id="df_label"/>
+	<mx:Image x="{bb2display.x+125}"  y="{bb2display.y+180}"  source="{pp_png}" id="pp_label"/>
+	<cx:TextInputSprite x="{bb2display.x+174}"  y="{bb2display.y+73}" text="00000"  id="hp_2p" height="36" width="100" />
+	<cx:TextInputSprite x="{bb2display.x+174}"  y="{bb2display.y+117}" text="00000" id="st_2p" height="36" width="100"   />
+	<cx:TextInputSprite  x="{bb2display.x+174}"  y="{bb2display.y+161}" text="00000"  id="df_2p" height="36" width="100" />
+
+	<mx:Image id="box" source="{bb2body_png}" x="0" y="0" />
+	<cx:ImageButtonSprite id="l_power" source="{l_power_png}" x="{box.x+56}" y="{box.y+190}"/>
+	<cx:ImageButtonSprite id="l_battle" source="{l_battle_png}"  x="{box.x+54}" y="{box.y+323}"/>
+	<cx:ImageButtonSprite id="light1" change_disabled="true" x="{box.x+328}" y="{box.y+445}" source="{light_png}"/>
+	<cx:ImageButtonSprite id="light2" change_disabled="true"  x="{box.x+419}" y="{box.y+445}" source="{light_png}"/>
+	<cx:ImageButtonSprite id="light3" change_disabled="true"  x="{box.x+507}" y="{box.y+445}" source="{light_png}"/>
+	<cx:ImageButtonSprite id="light4" change_disabled="true"  x="{box.x+594}" y="{box.y+445}" source="{light_png}"/>
+	<cx:ImageButtonSprite id="light5" change_disabled="true"  x="{box.x+682}" y="{box.y+444}" source="{light_png}"/>	
+	<cx:ImageButtonSprite id="on_off" x="{box.x+308}" y="{box.y+566}" source="{on_png}"/>
+	<cx:ImageButtonSprite id="select_button" x="{box.x+468}" y="{box.y+566}" source="{select_png}"/>
+	<cx:ImageButtonSprite id="set_button" x="{box.x+635}" y="{box.y+566}" source="{set_png}"/>
+	<cx:ImageButtonSprite id="r_power" x="{box.x+890}" y="{box.y+175}" source="{r_power_png}" />
+	<cx:ImageButtonSprite id="r_battle"  x="{box.x+892}" y="{box.y+308}" source="{r_power_png}" />
+
+	<mx:Image id="sound_on" x="{box.x+50}"  y="{box.y+650}"  source="{sound_on_png}" />
+	<mx:Image id="sound_off" x="{box.x+50}"  y="{box.y+650}" source="{sound_off_png}" />
+	
+	<mx:HBox x="{box.x+268}" y="{box.y+750}" horizontalAlign="center" verticalScrollPolicy="off" horizontalScrollPolicy="off">
+		<mx:TextInput id="card_in" restrict="[0-9]" fontSize="20" maxChars="13"  text="2997971385282" enabled="false" />
+		<mx:Button label="CARD IN" id="card_in_button" fontSize="20" />
+		<mx:Button label="CAMERA_IN" id="init_card_reader_button" fontSize="20"  />
+		<mx:VRule width="50" />
+		<mx:Button label="CHANGE_SCALE" id="change_scale_button" fontSize="20"  />
+	</mx:HBox>
+	
+	<mx:VBox id="camera_reader" visible="true"  x="{box.x+356}" y="{box.y+95}" horizontalAlign="center" >
+		<mx:TextInput text="BARCODE IMAGE READER SYSTEM" color="#FFFFFF" paddingTop="0" paddingBottom="0" backgroundColor="#111111" width="200" textAlign="center" editable="false" borderStyle="none" />
+		<mx:VideoDisplay id="video_display" width="320" height="240" borderStyle="solid" borderColor="#FFFFFF" />
+		<mx:HBox horizontalAlign="right">
+			<mx:CheckBox id="auto_input"  />
+			<mx:Label text="Immediately " color="#FFFFFF" />
+			<mx:Button id="select_image_button" label="Image Select" />
+			<mx:Button id="get_camera_button" label="Camera Input" />
+		</mx:HBox>
+	</mx:VBox>
+	
+	<mx:VBox x="{box.x+1044}" y="{box.y}">
+		<mx:DataGrid height="200" width="500"  x="{box.x+1044}" y="{box.y}" id="card_list_datagrid">
+			<mx:columns>
+				<mx:DataGridColumn dataField="name"/>
+			</mx:columns>
+		</mx:DataGrid>
+		<mx:DataGrid  height="300" width="500"  x="{box.x+1044}" y="{box.y+250}" id="card_name_datagrid" >
+			<mx:columns>
+				<mx:DataGridColumn dataField="name"/>
+			</mx:columns>					
+		</mx:DataGrid>
+		<mx:Image id="card_image" />
+	</mx:VBox>
+	
+</mx:Application>
